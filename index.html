@@ -6,7 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC Accounting</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet"  src="/input.css"> 
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+body {
+    background-image: url('/IMG_1558.jpg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+
+}
+
+/*Hamburger*/
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition:all 0.25s;
+    position:relative;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background:black;
+    transform: rotate(0);
+    transition:all 0.5s;
+}
+
+.hamburger-mid{
+    transform: translateY(7px)
+}
+
+.hamburger-bottom{
+    transform: translateY(14px)
+}
+
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px)
+}
+
+/*Rotates the top line downwards to foem an x*/
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+
+}
+
+
+/*Removes the middle line*/
+.open .hamburger-mid{
+    display: none;
+
+}
+
+
+/*opposite of the hamburger-top to turn the bottom line upwards to cross te top line forming an X */
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+
+}
+
+    </style>
 </head>
 <body>
     <nav class="relative container mx-auto p-6">
