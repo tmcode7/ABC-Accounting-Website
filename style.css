@@ -1,3 +1,7 @@
-header {
-    max-height: 100vh;
+body {
+    background-image: url('/IMG_1558.jpg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+
 }
